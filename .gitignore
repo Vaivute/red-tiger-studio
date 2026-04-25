@@ -3,8 +3,10 @@
 ._*
 
 # Build / packaged artifacts
-HTML pages/Red Tiger Studio Preview.zip
-shopify_email_templates.zip
+*.zip
+
+# Original HTML pages folder (files moved to repo root)
+HTML pages/
 
 # Shopify theme — tracked separately
 Shipify Fluide pages/
