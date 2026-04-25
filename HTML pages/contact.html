@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#B8250F">
+  <title>Contact — Red Tiger Studio</title>
+  <meta name="description" content="Questions, commissions, press. Drop a line, the studio reads everything.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,wght@0,300..900;1,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    if (sessionStorage.getItem('rts-unlocked') !== '1') {
+      document.documentElement.classList.add('is-locked');
+    }
+  </script>
+
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="template-page">
+
+  <!-- Preview gate -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__inner">
+      <div class="eyebrow">Preview</div>
+      <h1 class="gate__title" id="gate-title">Red Tiger Studio</h1>
+      <p>This preview is private. Enter the password to view.</p>
+      <form class="gate__form" id="gate-form">
+        <label for="gate-input" class="visually-hidden">Password</label>
+        <input type="password" id="gate-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="btn btn-primary">Enter</button>
+      </form>
+      <p class="gate__error" id="gate-error" hidden>Wrong password.</p>
+    </div>
+  </div>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">Red Tiger Studio</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a href="subscription.html" class="site-header__cta">Join</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- Contact -->
+    <section class="contact-wrap">
+      <div class="contact-info">
+        <div class="eyebrow" style="margin-bottom: 1.5rem;">Say hello</div>
+        <h1>Get in touch.</h1>
+        <p style="font-size: 1.15rem; max-width: 36ch; margin-bottom: 2rem;">Questions about your subscription, a commission, wholesale or press. Drop a line. I read everything.</p>
+
+        <h3>Email</h3>
+        <p><a href="mailto:hello@redtigerstudio.com">hello@redtigerstudio.com</a></p>
+
+        <h3>Studio</h3>
+        <p>Seattle, Washington<br>By appointment only</p>
+
+        <h3>Follow</h3>
+        <p>
+          <a href="https://www.instagram.com/red_tiger_studio/" target="_blank" rel="noopener">Instagram</a>
+        </p>
+
+        <h3>Response time</h3>
+        <p>Within two working days. Commissions and press queries may take a little longer.</p>
+      </div>
+
+      <div class="contact-form">
+        <div class="eyebrow" style="margin-bottom: 1.5rem;">Drop a line</div>
+        <h2 class="display-md" style="margin-bottom: 2rem;">Send a message.</h2>
+
+        <form onsubmit="event.preventDefault(); alert('This is a preview. Form submission will work once deployed to Shopify.');">
+          <div class="form-field">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-subject">What's this about</label>
+            <select id="contact-subject" name="subject">
+              <option value="Subscription question">Subscription question</option>
+              <option value="Commission enquiry">Commission enquiry</option>
+              <option value="Wholesale">Wholesale or stockist</option>
+              <option value="Press">Press</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-body">Message</label>
+            <textarea id="contact-body" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h4>Red Tiger Studio</h4>
+          <p style="max-width: 36ch; line-height: 1.5; margin-bottom: 1.5rem;">
+            Original art, posted monthly. Made by hand in Seattle.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="your@email.com" style="flex: 1; padding: 0.75rem; background: transparent; border: 1px solid rgba(26,21,18,0.3); color: var(--ink); font-family: inherit;">
+            <button class="btn btn-primary" style="padding: 0.75rem 1.25rem;">Join</button>
+          </div>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="subscription.html">Subscription</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Prints</a></li>
+            <li><a href="#">Past Drops</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Commissions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/red_tiger_studio/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div>&copy; 2026 Red Tiger Studio. Seattle, WA.</div>
+        <div>
+          <a href="#">Privacy</a>
+          &nbsp;&middot;&nbsp;
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js" defer></script>
+</body>
+</html>

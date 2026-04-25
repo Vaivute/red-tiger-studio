@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#B8250F">
+  <title>About — Red Tiger Studio</title>
+  <meta name="description" content="An independent Seattle art studio making one signed print a month, for you.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=Fraunces:ital,wght@0,300..900;1,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    if (sessionStorage.getItem('rts-unlocked') !== '1') {
+      document.documentElement.classList.add('is-locked');
+    }
+  </script>
+
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="template-page">
+
+  <!-- Preview gate -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__inner">
+      <div class="eyebrow">Preview</div>
+      <h1 class="gate__title" id="gate-title">Red Tiger Studio</h1>
+      <p>This preview is private. Enter the password to view.</p>
+      <form class="gate__form" id="gate-form">
+        <label for="gate-input" class="visually-hidden">Password</label>
+        <input type="password" id="gate-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="btn btn-primary">Enter</button>
+      </form>
+      <p class="gate__error" id="gate-error" hidden>Wrong password.</p>
+    </div>
+  </div>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">Red Tiger Studio</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="subscription.html" class="site-header__cta">Join</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- About hero -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero__grid">
+          <div class="about-portrait">
+            <img src="hong2.JPG" alt="Studio portrait" style="aspect-ratio: 4/5; object-fit: cover; width: 100%; border: 2px solid var(--ink);">
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom: 1.5rem;">Studio founder</div>
+            <h1 class="about-hero__title">Hi, I'm the tiger behind the red.</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prose -->
+    <section class="section">
+      <div class="container">
+        <div class="prose">
+          <p>Red Tiger Studio started in a small Seattle apartment with a kitchen table, a stack of paper and a question. What if art felt less like a gallery visit and more like a letter from a friend?</p>
+
+          <p>The subscription is the answer. Every month, I make a new piece, sign it, number it and post it to members across the US. No algorithm picks it. No factory prints it. It's just me, a studio and a pile of rigid mailers.</p>
+
+          <p>My work sits somewhere between still life and folklore. Bold colour. Loose line. A bit of bite. If you've seen my Instagram, you know the feel. If you haven't, the next print in your mailbox is the best introduction.</p>
+
+          <p>I believe original art should be something you live with, not something you save for. That's why the subscription is eight dollars, and why I cap founding membership at a hundred people. Real relationships, not reach.</p>
+
+          <p>If you collect with me, you're buying more than a print. You're keeping an independent studio running from the Pacific Northwest, one envelope at a time. Thank you for being here.</p>
+
+          <p class="prose__signature">Hong</p>
+        </div>
+
+        <div class="values">
+          <div class="value">
+            <div class="value__num">01</div>
+            <h3>Made by hand</h3>
+            <p>Every print is signed and numbered by me. No print-on-demand, no middle layer.</p>
+          </div>
+          <div class="value">
+            <div class="value__num">02</div>
+            <h3>Priced to live with</h3>
+            <p>Original art that fits into your month, not your inheritance. Eight dollars, every time.</p>
+          </div>
+          <div class="value">
+            <div class="value__num">03</div>
+            <h3>From Seattle, with bite</h3>
+            <p>Pacific Northwest studio, independent maker, small scale on purpose.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="section section-red text-center">
+      <div class="container">
+        <h2 class="display-lg" style="max-width: 20ch; margin: 0 auto 2rem;">Want to start the collection?</h2>
+        <a href="subscription.html" class="btn" style="background: var(--bone); color: var(--tiger-red); border-color: var(--bone);">Join for $8 a month</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h4>Red Tiger Studio</h4>
+          <p style="max-width: 36ch; line-height: 1.5; margin-bottom: 1.5rem;">
+            Original art, posted monthly. Made by hand in Seattle.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="your@email.com" style="flex: 1; padding: 0.75rem; background: transparent; border: 1px solid rgba(26,21,18,0.3); color: var(--ink); font-family: inherit;">
+            <button class="btn btn-primary" style="padding: 0.75rem 1.25rem;">Join</button>
+          </div>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="subscription.html">Subscription</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Prints</a></li>
+            <li><a href="#">Past Drops</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Commissions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/red_tiger_studio/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div>&copy; 2026 Red Tiger Studio. Seattle, WA.</div>
+        <div>
+          <a href="#">Privacy</a>
+          &nbsp;&middot;&nbsp;
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js" defer></script>
+</body>
+</html>

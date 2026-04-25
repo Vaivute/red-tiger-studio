@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+._*
+
+# Build / packaged artifacts
+HTML pages/Red Tiger Studio Preview.zip
+shopify_email_templates.zip
+
+# Shopify theme — tracked separately
+Shipify Fluide pages/

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#B8250F">
+  <title>Red Tiger Studio — Original art, posted monthly</title>
+  <meta name="description" content="A hand-signed original print posted to your door each month. Made by hand in Seattle.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,wght@0,300..900;1,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    if (sessionStorage.getItem('rts-unlocked') !== '1') {
+      document.documentElement.classList.add('is-locked');
+    }
+  </script>
+
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="template-index">
+
+  <!-- Preview gate -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__inner">
+      <div class="eyebrow">Preview</div>
+      <h1 class="gate__title" id="gate-title">Red Tiger Studio</h1>
+      <p>This preview is private. Enter the password to view.</p>
+      <form class="gate__form" id="gate-form">
+        <label for="gate-input" class="visually-hidden">Password</label>
+        <input type="password" id="gate-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="btn btn-primary">Enter</button>
+      </form>
+      <p class="gate__error" id="gate-error" hidden>Wrong password.</p>
+    </div>
+  </div>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">Red Tiger Studio</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="active">Home</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="subscription.html" class="site-header__cta">Join</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <div class="eyebrow hero__eyebrow">Seattle, WA — Est. 2025</div>
+            <h1 class="hero__title">Original art. <em>In your mailbox.</em> Every month.</h1>
+            <p class="hero__lede">A hand-signed original print posted to your door each month. Start a real collection for the price of a cocktail.</p>
+            <div class="hero__ctas">
+              <a href="subscription.html" class="btn btn-primary">Start my collection</a>
+              <a href="#" class="btn btn-ghost">Shop originals</a>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="placeholder placeholder-tall" style="border: 2px solid var(--ink); transform: rotate(-2deg);">Hero artwork</div>
+            <div class="hero__stamp">
+              Only<strong>$8</strong>a month
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee strip -->
+    <section class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <span>Hand signed</span>
+        <span>Posted monthly</span>
+        <span>Made in Seattle</span>
+        <span>Limited editions</span>
+        <span>Hand signed</span>
+        <span>Posted monthly</span>
+        <span>Made in Seattle</span>
+        <span>Limited editions</span>
+      </div>
+    </section>
+
+    <!-- Featured prints -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="display-md">Recent drops.</h2>
+          <a href="#">View all past drops</a>
+        </div>
+
+        <div class="featured-grid">
+          <div class="featured-item">
+            <div class="placeholder">February 2026</div>
+            <h3>February drop</h3>
+            <p>Signed print · 5×7"</p>
+          </div>
+          <div class="featured-item">
+            <div class="placeholder">March 2026</div>
+            <h3>March drop</h3>
+            <p>Signed print · 5×7"</p>
+          </div>
+          <div class="featured-item">
+            <div class="placeholder">April 2026</div>
+            <h3>April drop</h3>
+            <p>Signed print · 5×7"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscription split -->
+    <section class="split section-cream">
+      <div class="split__text">
+        <div class="eyebrow" style="margin-bottom: 1.5rem;">The subscription</div>
+        <h2 class="display-lg">Eight dollars. One print. Every month.</h2>
+        <p>Think of it as a slow-build art collection. Hand-signed by me, posted on the first of each month, free shipping across the US.</p>
+        <p>No algorithms. No filler. Just original work made in a Seattle studio, sent straight to your door.</p>
+        <div style="margin-top: 2rem;">
+          <a href="subscription.html" class="btn btn-primary">Start my collection</a>
+        </div>
+      </div>
+      <div class="split__visual">
+        <div class="placeholder">Subscriber unboxing</div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="display-md">Collectors say.</h2>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>"The best eight dollars I spend all month. It feels like getting a handwritten letter, only better."</p>
+            <cite>— Founding member, Seattle</cite>
+          </div>
+          <div class="testimonial">
+            <p>"I've framed every single print. My hallway is now a proper gallery and my friends keep asking where the art comes from."</p>
+            <cite>— Subscriber, Portland</cite>
+          </div>
+          <div class="testimonial">
+            <p>"A tiny luxury that arrives right when you need it. I look forward to the first of the month now."</p>
+            <cite>— Subscriber, Brooklyn</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founding members CTA -->
+    <section class="section section-dark">
+      <div class="container text-center">
+        <div class="eyebrow" style="margin-bottom: 1.5rem;">Founding members</div>
+        <h2 class="display-lg" style="max-width: 18ch; margin: 0 auto 1.5rem;">Lock in <em style="color: var(--tiger-red); font-style: italic;">$8 forever.</em></h2>
+        <p style="max-width: 48ch; margin: 0 auto 2.5rem; font-size: 1.15rem;">The first 100 members get their monthly price locked for life, no matter how the subscription grows.</p>
+        <a href="subscription.html" class="btn btn-primary">Claim a founding spot</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h4>Red Tiger Studio</h4>
+          <p style="max-width: 36ch; line-height: 1.5; margin-bottom: 1.5rem;">
+            Original art, posted monthly. Made by hand in Seattle.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="your@email.com" style="flex: 1; padding: 0.75rem; background: transparent; border: 1px solid rgba(26,21,18,0.3); color: var(--ink); font-family: inherit;">
+            <button class="btn btn-primary" style="padding: 0.75rem 1.25rem;">Join</button>
+          </div>
+        </div>
+
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="subscription.html">Subscription</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Prints</a></li>
+            <li><a href="#">Past Drops</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Commissions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/red_tiger_studio/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <div>&copy; 2026 Red Tiger Studio. Seattle, WA.</div>
+        <div>
+          <a href="#">Privacy</a>
+          &nbsp;&middot;&nbsp;
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js" defer></script>
+</body>
+</html>

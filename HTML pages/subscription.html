@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#B8250F">
+  <title>Subscription — Red Tiger Studio</title>
+  <meta name="description" content="One hand-signed original print, posted to your door every month. $8.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,wght@0,300..900;1,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    if (sessionStorage.getItem('rts-unlocked') !== '1') {
+      document.documentElement.classList.add('is-locked');
+    }
+  </script>
+
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="template-page">
+
+  <!-- Preview gate -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__inner">
+      <div class="eyebrow">Preview</div>
+      <h1 class="gate__title" id="gate-title">Red Tiger Studio</h1>
+      <p>This preview is private. Enter the password to view.</p>
+      <form class="gate__form" id="gate-form">
+        <label for="gate-input" class="visually-hidden">Password</label>
+        <input type="password" id="gate-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="btn btn-primary">Enter</button>
+      </form>
+      <p class="gate__error" id="gate-error" hidden>Wrong password.</p>
+    </div>
+  </div>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">Red Tiger Studio</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="subscription.html" class="active">Subscription</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="subscription.html" class="site-header__cta">Join</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- Subscription hero -->
+    <section class="sub-hero">
+      <div class="container">
+        <div class="eyebrow" style="color: var(--bone); margin-bottom: 1rem;">The Red Tiger Subscription</div>
+        <div class="sub-hero__price"><sup>$</sup>8</div>
+        <div class="sub-hero__per">Per month · Free US shipping</div>
+        <p class="sub-hero__tagline">One hand-signed original print, posted to your door on the first of every month.</p>
+        <a href="#plans" class="btn" style="background: var(--bone); color: var(--tiger-red); border-color: var(--bone);">Start my collection</a>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <h3>Subscribe</h3>
+          <p>Pick monthly or annual. Takes under a minute. Cancel any time.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <h3>Receive</h3>
+          <p>A signed, limited-edition print arrives in a rigid mailer on the first of each month.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <h3>Collect</h3>
+          <p>Frame it, gift it, hang it. Twelve months in, you have a real collection.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="section" id="plans">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 4rem;">
+          <div class="eyebrow" style="margin-bottom: 1rem;">Pick your plan</div>
+          <h2 class="display-md">Two ways to collect.</h2>
+        </div>
+
+        <div class="plans">
+          <div class="plan">
+            <h3>Monthly</h3>
+            <div class="plan__price"><sup>$</sup>8</div>
+            <div class="plan__period">Per month</div>
+            <ul>
+              <li>One signed print each month</li>
+              <li>Free US shipping</li>
+              <li>Pause or cancel any time</li>
+              <li>Member-only access to past drops</li>
+            </ul>
+            <a href="#" class="btn btn-ghost" style="width: 100%; text-align: center;">Subscribe monthly</a>
+          </div>
+
+          <div class="plan plan--featured">
+            <div class="plan__badge">Best value</div>
+            <h3>Annual</h3>
+            <div class="plan__price"><sup>$</sup>80</div>
+            <div class="plan__period">12 months, save $16</div>
+            <ul>
+              <li>Twelve signed prints, delivered monthly</li>
+              <li>Free US shipping</li>
+              <li>Two months free vs monthly</li>
+              <li>Exclusive welcome gift</li>
+            </ul>
+            <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Subscribe annually</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founding -->
+    <section class="founding">
+      <div class="container">
+        <div class="eyebrow" style="color: var(--bone); margin-bottom: 1rem;">Limited to 100 members</div>
+        <div class="founding__count">$8 forever</div>
+        <p>Founding members lock in the $8 monthly rate for life. No matter how the subscription grows or how prices shift, yours stays right where it started.</p>
+        <p style="font-family: var(--font-heading); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tiger-red); margin-top: 2rem;">
+          Spots remaining: <span id="spots-left">87</span> / 100
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3rem;">
+          <div class="eyebrow" style="margin-bottom: 1rem;">Questions</div>
+          <h2 class="display-md">The fine print.</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>When does my print ship?</summary>
+            <p>Prints ship on the first working day of each month. You'll get a tracking email when yours goes out. Delivery takes three to five working days across the US.</p>
+          </details>
+          <details>
+            <summary>Can I cancel any time?</summary>
+            <p>Yes. Manage your subscription from your account page. Cancel, pause or skip a month whenever you like. No questions, no hoops.</p>
+          </details>
+          <details>
+            <summary>What if I miss a month?</summary>
+            <p>Past drops go into the catch-up store after 60 days. You'll always have a way to complete the collection, though some months will sell out.</p>
+          </details>
+          <details>
+            <summary>Can I gift a subscription?</summary>
+            <p>Yes. Pick the annual plan and enter the recipient's address at checkout. We'll send a welcome card letting them know it's from you.</p>
+          </details>
+          <details>
+            <summary>What size are the prints?</summary>
+            <p>Prints are 5×7 inches on archival cotton rag paper. They fit standard frames and mailers arrive rigid, so nothing bends.</p>
+          </details>
+          <details>
+            <summary>Do you ship internationally?</summary>
+            <p>US only for now. International shipping arrives in early 2026. Sign up to the newsletter to hear first.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-dark text-center">
+      <div class="container">
+        <h2 class="display-lg" style="max-width: 20ch; margin: 0 auto 2rem;">One signed print. Every month. <em style="color: var(--tiger-red); font-style: italic;">Eight dollars.</em></h2>
+        <a href="#plans" class="btn btn-primary">Start my collection</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h4>Red Tiger Studio</h4>
+          <p style="max-width: 36ch; line-height: 1.5; margin-bottom: 1.5rem;">
+            Original art, posted monthly. Made by hand in Seattle.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="your@email.com" style="flex: 1; padding: 0.75rem; background: transparent; border: 1px solid rgba(26,21,18,0.3); color: var(--ink); font-family: inherit;">
+            <button class="btn btn-primary" style="padding: 0.75rem 1.25rem;">Join</button>
+          </div>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="subscription.html">Subscription</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Prints</a></li>
+            <li><a href="#">Past Drops</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Commissions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/red_tiger_studio/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div>&copy; 2026 Red Tiger Studio. Seattle, WA.</div>
+        <div>
+          <a href="#">Privacy</a>
+          &nbsp;&middot;&nbsp;
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js" defer></script>
+</body>
+</html>
